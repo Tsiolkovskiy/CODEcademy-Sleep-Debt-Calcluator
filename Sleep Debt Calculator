@@ -1,0 +1,61 @@
+let hours=0;
+
+function getSleepHours(day){
+     switch(day){
+      case 'monday':
+      hours=7;
+      break;
+      case 'tuesday':
+      hours=6;
+      break;
+      case 'wednesday':
+      hours=8;
+      break;
+      case 'thursday':
+      hours=9;
+      break;
+      case 'friday':
+      hours=10;
+      break;
+      case 'saturday':
+      hours=11;
+      break;
+      case 'sunday':
+      hours=12;
+      break;
+      default:
+      hours=0;
+     }
+return hours;
+
+}
+
+
+let actualSleepingHours=0;
+let idealSleepingHours=0;
+getSleepHours('monday');
+actualSleepingHours+=hours;
+idealSleepingHours+=8;
+getSleepHours('tuesday');
+actualSleepingHours+=hours;
+idealSleepingHours+=8;
+getSleepHours('wednesday');
+actualSleepingHours+=hours;
+idealSleepingHours+=8;
+getSleepHours('thursday');
+actualSleepingHours+=hours;
+idealSleepingHours+=8;
+getSleepHours('friday');
+actualSleepingHours+=hours;
+idealSleepingHours+=8;
+getSleepHours('saturday');
+actualSleepingHours+=hours;
+idealSleepingHours+=8;
+getSleepHours('sunday');
+actualSleepingHours+=hours;
+idealSleepingHours+=8;
+
+function calculateSleepDept(){
+  return actualSleepingHours-idealSleepingHours;
+}
+console.log(calculateSleepDept());
